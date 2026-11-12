@@ -26,8 +26,8 @@ qiime tools extract --input-path trimmed_remove_primers.qza  --output-path extra
 qiime demux summarize --i-data demux.qza --o-visualization demux.qzv
 
 
-#Denoising with DADA2 (single-end reads)
-qiime dada2 denoise-single
+#Denoising with DADA2 (paired-end reads)
+qiime dada2 denoise-paired
 --i-demultiplexed-seqs demux.qza
 --p-trim-left 10
 --p-trunc-len 200
